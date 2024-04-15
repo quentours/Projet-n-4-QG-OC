@@ -158,6 +158,7 @@
         imagesCollection[imagesCollection.length - 1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
+    // Fonction pour faire défiler les images dans la modale
     nextImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
