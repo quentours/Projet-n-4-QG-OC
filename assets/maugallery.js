@@ -52,11 +52,12 @@
     $(".gallery-item").on("click", function() {
       if (options.lightBox && $(this).prop("tagName") === "IMG") {
         $.fn.mauGallery.methods.openLightBox($(this), options.lightboxId);
+
       } else {
         return;
       }
     });
-
+// définition des eventListener sur les boutons de la modale et les filtres
     $(".gallery").on("click", ".nav-link", $.fn.mauGallery.methods.filterByTag);
     $(".gallery").on("click", ".mg-prev", () =>
       $.fn.mauGallery.methods.prevImage(options.lightboxId)
@@ -119,6 +120,7 @@
         .attr("src", element.attr("src"));
       $(`#${lightboxId}`).modal("toggle");
     },
+    // fonction pour aller à l'image précédente
     prevImage() {
       let activeImage = null;
       $("img.gallery-item").each(function() {
@@ -145,6 +147,7 @@
           }
         });
       }
+  
       let index = 0,
         next = null;
 
@@ -153,9 +156,8 @@
           index = i ;
         }
       });
-      next =
-        imagesCollection[index] ||
-        imagesCollection[imagesCollection.length - 1];
+      // Modification de la définition du next pour le défilement dans la modale
+      next = imagesCollection[index -1] ;
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     // Fonction pour faire défiler les images dans la modale
@@ -193,7 +195,8 @@
           index = i;
         }
       });
-      next = imagesCollection[index] || imagesCollection[0];
+      // Modification de la définition du next pour le défilement dans la modale
+      next = imagesCollection[index +1];
       $(".lightboxImage").attr("src", $(next).attr("src"));
     },
     createLightBox(gallery, lightboxId, navigation) {
@@ -236,12 +239,15 @@
         console.error(`Unknown tags position: ${position}`);
       }
     },
+    // Gestion de la filtration
     filterByTag() {
-      if ($(this).hasClass("active-tag")) {
+      // Erreur dans les noms de classe et le selecteur d'élement
+      if ($(this).hasClass("active")) {
         return;
       }
-      $(".active-tag").removeClass("active active-tag");
-      $(this).addClass("active-tag");
+      $(".nav-link").removeClass("active");
+
+      $(this).addClass("active");
 
       var tag = $(this).data("images-toggle");
 
@@ -262,3 +268,4 @@
     }
   };
 })(jQuery);
+
