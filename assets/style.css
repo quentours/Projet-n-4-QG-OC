@@ -1,11 +1,9 @@
 body {
 	max-width: 1920px;
 	margin: auto;
-}
-* {
 	font-family: 'Inter';
-	font-style: normal;
 }
+
 .top-header {
 	background-color: white;
 	position: sticky;
@@ -13,8 +11,7 @@ body {
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
-	padding-inline: 100px;
-	padding-block: 30px;
+	padding: 30px 100px;
 	align-items: center;
 }
 
@@ -45,8 +42,7 @@ body {
 #about {
 	display: flex;
 	background-color: #F6D2B8;
-	padding-inline: 100px;
-	padding-block: 100px;
+	padding: 100px;
 	position: relative;
 }
 
@@ -75,8 +71,7 @@ body {
 	flex: 2
 }
 .about-me__title {
-	margin-top: 1em;
-	margin-bottom: 60px;
+	margin: 1em 0 60px;
 	font-size: 30px;
 }
 .about-me__introduction {
@@ -90,9 +85,6 @@ body {
 	font-size: 14px;
 }
 
-#gallery {
-	/*	min-height: 100vh; */
-}
 .title{
 	text-align: center;
 	padding-block: 2em;
@@ -144,15 +136,14 @@ body {
 	padding-block: 3em;
 }
 .quote__text {
-	font-family: Spectral;
-	font-style: italic;
 	font-weight: 300;
+	
 
 }
 .quote__author {
-	font-family: Spectral;
 	font-weight: 800;
 	font-size: 22px;
+	font-style: normal;
 }
 
 #services {
@@ -194,8 +185,7 @@ body {
 	margin: auto;
 	background-color: #D8D3A8 ;
 	position: relative;
-	padding-inline: 100px;
-	padding-block: 100px;
+	padding: 100px;
 }
 
 #contact .container {
@@ -271,15 +261,11 @@ input[type="submit"] {
 	.picture.left::before {
 		width: 100%;
 		height: 30%;
-		position: absolute;
 		bottom: auto;
 		top: 0;
-		left: 0;
-		z-index: -1;
 	}
 	.about-me__title{
 		text-align: center;
-		margin-top: 1em;
 	}
 	#services .container {
 		flex-direction: column;
@@ -297,10 +283,8 @@ input[type="submit"] {
 	#services .container::before{
 		width: 30%;
 		height: 100%;
-		bottom: 0;
 		right: 0;
 		left: auto;
-		z-index: 0;
 	}
 
 	#contact .container {
@@ -312,10 +296,6 @@ input[type="submit"] {
 	.picture.right::before {
 		width: 100%;
 		height: 30%;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		z-index: -1;
 	}
 }
 
