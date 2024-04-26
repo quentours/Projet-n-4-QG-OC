@@ -109,6 +109,14 @@ nav a:hover {
 .nav-pills .nav-link {
 	color: #000
 }
+
+.tags-bar {
+	display: flex;
+	flex: row;
+	justify-content: center;
+	gap: 15px;
+}
+
 .item-column {
 	position: relative;
 	margin-bottom: 0 !important;
