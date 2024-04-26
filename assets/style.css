@@ -78,10 +78,16 @@ nav a:hover {
 	font-size: 30px;
 }
 .about-me__introduction {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+	margin-right: 25px;
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60%;
+	width: 60% !important;
+	font-size: 1rem !important;
+	line-height: 1.2;
 }
 #about-me p {
 	width: 80%;
@@ -97,7 +103,7 @@ nav a:hover {
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
 	color: #fff;
-	background-color: #BEB45A;
+	background-color: #1C6474;
 	border-radius:0 ;
 }
 .nav-pills .nav-link {
